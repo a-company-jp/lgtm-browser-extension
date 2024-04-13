@@ -22,20 +22,6 @@ const LgtmList = () => {
           return (
             <>
               <LgtmItem lgtm={lgtm} key={lgtm.id} />
-              <LgtmItem lgtm={lgtm} key={lgtm.id} />
-              <LgtmItem lgtm={lgtm} key={lgtm.id} />
-              <LgtmItem lgtm={lgtm} key={lgtm.id} />
-              <LgtmItem lgtm={lgtm} key={lgtm.id} />
-              <LgtmItem lgtm={lgtm} key={lgtm.id} />
-              <LgtmItem lgtm={lgtm} key={lgtm.id} />
-              <LgtmItem lgtm={lgtm} key={lgtm.id} />
-              <LgtmItem lgtm={lgtm} key={lgtm.id} />
-              <LgtmItem lgtm={lgtm} key={lgtm.id} />
-              <LgtmItem lgtm={lgtm} key={lgtm.id} />
-              <LgtmItem lgtm={lgtm} key={lgtm.id} />
-              <LgtmItem lgtm={lgtm} key={lgtm.id} />
-              <LgtmItem lgtm={lgtm} key={lgtm.id} />
-              <LgtmItem lgtm={lgtm} key={lgtm.id} />
             </>
           );
         })}
