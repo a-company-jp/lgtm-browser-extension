@@ -13,7 +13,8 @@ const LgtmList = () => {
     };
 
     fetch();
-  });
+    // eslint-disable-next-line
+  }, []);
 
   return (
     <>
@@ -21,20 +22,6 @@ const LgtmList = () => {
         {lgtmList.map((lgtm) => {
           return (
             <>
-              <LgtmItem lgtm={lgtm} key={lgtm.id} />
-              <LgtmItem lgtm={lgtm} key={lgtm.id} />
-              <LgtmItem lgtm={lgtm} key={lgtm.id} />
-              <LgtmItem lgtm={lgtm} key={lgtm.id} />
-              <LgtmItem lgtm={lgtm} key={lgtm.id} />
-              <LgtmItem lgtm={lgtm} key={lgtm.id} />
-              <LgtmItem lgtm={lgtm} key={lgtm.id} />
-              <LgtmItem lgtm={lgtm} key={lgtm.id} />
-              <LgtmItem lgtm={lgtm} key={lgtm.id} />
-              <LgtmItem lgtm={lgtm} key={lgtm.id} />
-              <LgtmItem lgtm={lgtm} key={lgtm.id} />
-              <LgtmItem lgtm={lgtm} key={lgtm.id} />
-              <LgtmItem lgtm={lgtm} key={lgtm.id} />
-              <LgtmItem lgtm={lgtm} key={lgtm.id} />
               <LgtmItem lgtm={lgtm} key={lgtm.id} />
             </>
           );
