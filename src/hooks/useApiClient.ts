@@ -1,17 +1,20 @@
 import axios from 'axios';
-import { AxiosError, AxiosResponse } from 'axios';
 
 const useApiClient = () => {
   const domain = import.meta.env.VITE_BACKEND_DOMAIN;
 
   interface BackendResponse {
+    // eslint-disable-next-line
     data: any;
+    // eslint-disable-next-line
     error: any;
   }
 
   const get = async (
     url: string,
+    // eslint-disable-next-line
     params?: Record<string, any>,
+    // eslint-disable-next-line
     headers?: Record<string, any>
   ): Promise<BackendResponse> => {
     return await axios.get(domain + url, { params, headers }).then((resp) => {
@@ -24,7 +27,9 @@ const useApiClient = () => {
 
   const post = async (
     url: string,
+    // eslint-disable-next-line
     body: any,
+    // eslint-disable-next-line
     headers?: Record<string, any>
   ): Promise<BackendResponse> => {
     return await axios
