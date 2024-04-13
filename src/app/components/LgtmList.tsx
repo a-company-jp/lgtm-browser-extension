@@ -13,6 +13,7 @@ const LgtmList = () => {
     };
 
     fetch();
+    // eslint-disable-next-line
   }, []);
 
   return (
