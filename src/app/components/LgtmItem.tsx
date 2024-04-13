@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Lgtm } from '../../types/lgtm.type';
 import { FaRegCopy, FaRegCheckCircle } from 'react-icons/fa';
+import { imageCopy } from '../../utils';
 
 interface Props {
   lgtm: Lgtm;
@@ -10,7 +11,8 @@ const LgtmItem = ({ lgtm }: Props) => {
   // NOTE: hover & click で image copy
   const [isCopying, setIsCopying] = useState(false);
 
-  const handleCopyClick = () => {
+  const handleCopyClick = async () => {
+    await imageCopy(lgtm.url);
     setIsCopying(true);
     setTimeout(() => {
       setIsCopying(false);
