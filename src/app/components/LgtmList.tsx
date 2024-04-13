@@ -13,7 +13,7 @@ const LgtmList = () => {
     };
 
     fetch();
-  });
+  }, []);
 
   return (
     <>
