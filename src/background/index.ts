@@ -17,3 +17,21 @@ browser.runtime.onInstalled.addListener(async (details) => {
     await browser.tabs.create({ url });
   }
 });
+
+let previousUrl: string | null = null;
+
+chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
+  if (tab && changeInfo.status === 'complete' && tab.url) {
+    // Check if the URL has changed from the previous one
+    if (tab.url !== previousUrl) {
+      previousUrl = tab.url; // Update the previous URL
+
+      const regex = /^https:\/\/github\.com\/.*\/pull\/.*\/files$/;
+      if (regex.test(tab.url)) {
+        console.log(`updated: ${tab.url}`);
+        // Reload the tab
+        chrome.tabs.reload(tabId);
+      }
+    }
+  }
+});
