@@ -32,17 +32,15 @@ const useApiClient = () => {
     // eslint-disable-next-line
     headers?: Record<string, any>
   ): Promise<BackendResponse> => {
-    return await axios
-      .post(process.env.PUBLIC_BACKEND_DOMAIN + url, body, { headers })
-      .then((resp) => {
-        if (resp.status < 210) {
-          return { data: resp.data, unauthorized: false, error: null };
-        }
-        if (resp.status === 401) {
-          return { data: null, unauthorized: true, error: resp.status };
-        }
-        return { data: null, unauthorized: false, error: resp.statusText };
-      });
+    return await axios.post(domain + url, body, { headers }).then((resp) => {
+      if (resp.status < 210) {
+        return { data: resp.data, unauthorized: false, error: null };
+      }
+      if (resp.status === 401) {
+        return { data: null, unauthorized: true, error: resp.status };
+      }
+      return { data: null, unauthorized: false, error: resp.statusText };
+    });
   };
 
   return { get, post };
