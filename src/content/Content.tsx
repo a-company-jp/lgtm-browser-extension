@@ -27,6 +27,7 @@ const Content = () => {
     return () => {
       lgtmButton?.removeEventListener('click', handleOnClickLgtmButton);
     };
+    // eslint-disable-next-line
   }, []); // このeffectはマウント時にのみ実行される
 
   return (
