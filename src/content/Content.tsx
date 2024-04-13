@@ -1,29 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import { FaCheckCircle } from 'react-icons/fa';
 import useLgtmRepo from '../hooks/useLgtmRepo';
-import { Lgtm } from '../types/lgtm.type';
 import { imageCopy } from '../utils';
 
 const Content = () => {
   const [isShowAlert, setIsShowAlert] = useState(false);
   const { list } = useLgtmRepo();
-  const [lgtmList, setLgtmList] = useState<Lgtm[]>([]);
-
-  useEffect(() => {
-    const fetch = async () => {
-      const lgtms = await list();
-      setLgtmList(lgtms);
-    };
-
-    fetch();
-    // eslint-disable-next-line
-  }, []);
 
   const handleOnClickLgtmButton = async () => {
-    // const index = Math.floor(Math.random() * (lgtmList.length - 1));
-    const index = 1;
-    console.log(lgtmList.length, index, lgtmList[index]);
-    const url = lgtmList[index].url;
+    const lgtms = await list();
+    const index = Math.floor(Math.random() * (lgtms.length - 1));
+    const url = lgtms[index].url;
     await imageCopy(url);
     setIsShowAlert(true);
     setTimeout(() => {
