@@ -46,6 +46,7 @@ const GenerateLgtmModal = ({ setShowModal }: Props) => {
 
   const handleOnCopy = async (imageUrl: string) => {
     await imageCopy(imageUrl);
+    setShowModal(false);
   };
 
   return (
