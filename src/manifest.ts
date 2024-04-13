@@ -7,15 +7,15 @@ import { version } from '../package.json';
 
 const manifest = defineManifest(async (env) => ({
   manifest_version: 3,
-  name: `${env.mode === 'development' ? '[Dev] ' : ''}Browser Extension TypeScript & React Starter`,
-  description: 'Browser Extension, TypeScript, React',
+  name: `LGTM-Gen for GitHub`,
+  description: 'Insert LGTM images into GitHub review comments.',
   version,
   background: {
     service_worker: 'background/index.ts',
   },
   content_scripts: [
     {
-      matches: ['http://*/*', 'https://*/*', 'file:///*'],
+      matches: ['https://github.com/*/pull/*/files'],
       js: ['content/index.tsx'],
     },
   ],
@@ -36,17 +36,17 @@ const manifest = defineManifest(async (env) => ({
   action: {
     default_popup: 'popup/popup.html',
     default_icon: {
-      '16': 'images/extension_16.png',
-      '32': 'images/extension_32.png',
-      '48': 'images/extension_48.png',
-      '128': 'images/extension_128.png',
+      '16': 'images/lgtm-icon.png',
+      '32': 'images/lgtm-icon.png',
+      '48': 'images/lgtm-icon.png',
+      '128': 'images/lgtm-icon.png',
     },
   },
   icons: {
-    '16': 'images/extension_16.png',
-    '32': 'images/extension_32.png',
-    '48': 'images/extension_48.png',
-    '128': 'images/extension_128.png',
+    '16': 'images/lgtm-icon.png',
+    '32': 'images/lgtm-icon.png',
+    '48': 'images/lgtm-icon.png',
+    '128': 'images/lgtm-icon.png',
   },
   permissions: ['storage', 'tabs'],
 }));
