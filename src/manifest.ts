@@ -7,7 +7,7 @@ import { version } from '../package.json';
 
 const manifest = defineManifest(async (env) => ({
   manifest_version: 3,
-  name: `LGTM-Gen for GitHub`,
+  name: `${env.mode === 'development' ? '[Dev] ' : ''}LGTM-Gen for GitHub`,
   description: 'Insert LGTM images into GitHub review comments.',
   version,
   background: {
