@@ -43,6 +43,23 @@ proxyStore.ready().then(() => {
   shadowWrapper.style.display = 'contents';
   shadowRoot.appendChild(shadowWrapper);
 
+  const fileAttachmentSection = document.querySelector('.js-upload-markdown-image.is-default');
+  if (fileAttachmentSection) {
+    const newElementHtml = `
+    <div class="pr-2 pl-2 pb-2">
+      <button type="button" class="Button--invisible Button--small Box Button" id="lgtmButton">
+        <span class="Button-content">
+          <span class="Button-visual Button-leadingVisual">
+            LGTM
+          </span>
+          <span class="Button-label">POST LGTM with LGTM Generator</span>
+        </span>
+      </button>
+    </div>`;
+
+    fileAttachmentSection.insertAdjacentHTML('beforeend', newElementHtml);
+  }
+
   createRoot(shadowWrapper).render(
     <React.StrictMode>
       <Provider store={proxyStore}>
