@@ -25,7 +25,7 @@ const LgtmItem = ({ lgtm }: Props) => {
         <img
           src={lgtm.url}
           alt=""
-          className="inset-0 h-full w-full group-hover:opacity-20 rounded-xl"
+          className="inset-0 h-full w-full group-hover:opacity-20 rounded-xl transition-opacity"
         />
         {isCopying ? (
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex items-center">
@@ -34,7 +34,7 @@ const LgtmItem = ({ lgtm }: Props) => {
           </div>
         ) : (
           <FaRegCopy
-            className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-75"
+            className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-75 transition-opacity"
             color=""
             size={35}
           />

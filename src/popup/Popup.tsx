@@ -12,9 +12,12 @@ const Popup = () => {
 
   return (
     <>
-      <div className="p-4 z-[999] flex justify-between bg-white outline sticky top-0">
-        <p className="text-2xl font-bold">LGTM Generator</p>
-        <button onClick={openModal} className="p-2 text-sm outline rounded hover:bg-gray-100">
+      <div className="p-4 z-[999] flex justify-between bg-white shadow-xl sticky top-0 bg-gradient-to-r from-cyan-500 to-blue-500">
+        <p className="text-2xl font-bold text-white outline-gray">LGTM Generator</p>
+        <button
+          onClick={openModal}
+          className="p-2 text-sm outline outline-gray-300 text-white rounded hover:bg-blue-400 transition-colors"
+        >
           + Generate
         </button>
       </div>
