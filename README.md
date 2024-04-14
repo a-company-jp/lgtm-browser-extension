@@ -1,7 +1,8 @@
 <div align="center">
   <br>
- <img src="https://raw.githubusercontent.com/sinanbekar/browser-extension-react-typescript-starter/main/public/images/extension_128.png" alt="Browser Extension React & TypeScript Starter" width="128">
-  <br>
+  
+  ![lgtm-icon](https://github.com/a-company-jp/lgtm-browser-extention/assets/90055003/9867f4c5-4320-419a-802d-cc1db3b4d2c8)
+
   <h2>
     Browser Extension <br>
     to give LGTM to Team Members easily
@@ -31,7 +32,7 @@
 
 <p align="center">
   <a href="https://lgtm.a.shion.pro/">LGTM Library Web Page</a> ·
-  <a href="https://github.com/a-company-jp/lgtm-browser-extention">Beta install</a> ·
+  <a href="https://drive.google.com/drive/folders/1o0jiySfak8smDsPlOhtNgQYEpvC9_HPX">Beta install</a> ·
   <a href="#install-notes">Install Notes</a> ·
   <a href="#license">License</a>
 </p>
