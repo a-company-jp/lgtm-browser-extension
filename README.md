@@ -32,7 +32,7 @@
 
 <p align="center">
   <a href="https://lgtm.a.shion.pro/">LGTM Library Web Page</a> ·
-  <a href="https://github.com/a-company-jp/lgtm-browser-extention">Beta install</a> ·
+  <a href="https://drive.google.com/drive/folders/1o0jiySfak8smDsPlOhtNgQYEpvC9_HPX">Beta install</a> ·
   <a href="#install-notes">Install Notes</a> ·
   <a href="#license">License</a>
 </p>
