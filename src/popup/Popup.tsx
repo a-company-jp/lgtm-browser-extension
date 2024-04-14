@@ -18,7 +18,7 @@ const Popup = () => {
           + Generate
         </button>
       </div>
-      <div className="p-4">
+      <div className="p-4 min-h-[500px]">
         <LgtmList />
       </div>
 
