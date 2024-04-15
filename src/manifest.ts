@@ -8,7 +8,8 @@ import { version } from '../package.json';
 const manifest = defineManifest(async (env) => ({
   manifest_version: 3,
   name: `${env.mode === 'development' ? '[Dev] ' : ''}LGTM-Gen for GitHub`,
-  description: 'Insert LGTM images into GitHub review comments.',
+  description: 'Enhance your GitHub reviews with instant LGTM image inserts!',
+  author: 'a-company-jp',
   version,
   background: {
     service_worker: 'background/index.ts',
