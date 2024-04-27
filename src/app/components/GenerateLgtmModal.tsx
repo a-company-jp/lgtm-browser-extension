@@ -2,6 +2,9 @@ import React, { Dispatch, SetStateAction, useState } from 'react';
 import { useDropzone } from 'react-dropzone';
 import useLgtmRepo from '../../hooks/useLgtmRepo';
 import { imageCopy } from '../../utils';
+import { useDispatch } from 'react-redux';
+import { getLgtms } from '../store/lgtmListSlice';
+import { AppDispatch } from '../store';
 
 interface Props {
   setShowModal: Dispatch<SetStateAction<boolean>>;
@@ -12,6 +15,7 @@ const GenerateLgtmModal = ({ setShowModal }: Props) => {
   const [uploadedImage, setUploadedImage] = useState<string | null>(null);
   const [imgBlob, setImgBlob] = useState<Blob>();
   const [recievedImage, setRecievedImage] = useState<string>('');
+  const dispatch = useDispatch<AppDispatch>();
 
   const closeModal = () => {
     setShowModal(false);
@@ -46,6 +50,7 @@ const GenerateLgtmModal = ({ setShowModal }: Props) => {
 
   const handleOnCopy = async (imageUrl: string) => {
     await imageCopy(imageUrl);
+    dispatch(getLgtms());
     setShowModal(false);
   };
 
