@@ -34,7 +34,7 @@ const Content = () => {
     <div className="fixed z-[999] top-[2.5%] left-1/2 w-[900px] transform -translate-x-1/2 -translate-y-1/2 shadow-xl">
       {isShowAlert && (
         <div
-          className="absolute top-0 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-cyan-500 to-blue-500 px-4 py-3 rounded"
+          className="absolute top-0 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-[#FF8C8C] to-[#E44C4C] px-4 py-3 rounded"
           role="alert"
         >
           <div className="flex items-center gap-3">

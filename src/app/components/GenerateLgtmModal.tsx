@@ -56,7 +56,7 @@ const GenerateLgtmModal = ({ setShowModal }: Props) => {
         {!uploadedImage ? (
           <div
             {...getRootProps()}
-            className="border-dashed border-4 border-cyan-500 p-8 rounded-lg text-center cursor-pointer"
+            className="border-dashed border-4 border-[#FF8C8C] p-8 rounded-lg text-center cursor-pointer"
           >
             <input {...getInputProps()} />
             <p className="text-gray-600">Drag & drop a file here, or click to select file</p>
@@ -73,13 +73,13 @@ const GenerateLgtmModal = ({ setShowModal }: Props) => {
                 <div className="w-[60%] mt-2 flex justify-between">
                   <button
                     onClick={handleDelete}
-                    className="bg-red-500 text-white py-2 px-4 rounded hover:bg-red-600 transition-colors"
+                    className="bg-gray-100 text-[#FF8C8C] rounded font-bold py-2 px-4"
                   >
                     Delete
                   </button>
                   <button
                     onClick={handleSubmit}
-                    className="bg-blue-500  text-white py-2 px-4 rounded hover:bg-blue-600 transition-colors"
+                    className="bg-[#FF8C8C] text-white rounded font-bold  py-2 px-4"
                   >
                     Submit
                   </button>
@@ -95,7 +95,7 @@ const GenerateLgtmModal = ({ setShowModal }: Props) => {
                 <div className="mt-2 flex">
                   <button
                     onClick={() => handleOnCopy(recievedImage)}
-                    className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600"
+                    className="bg-[#FF8C8C] text-white py-2 px-4 rounded"
                   >
                     Image Copy
                   </button>
